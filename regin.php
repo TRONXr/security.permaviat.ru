@@ -39,16 +39,16 @@
 				
 					<form id="registrationForm" onsubmit="return false;">
 						<div class="sub-name">Логин:</div>
-						<input name="_login" type="text" placeholder="Введите логин" required value="gkjhdf123"/>
+						<input name="_login" type="text" placeholder="Введите логин" required />
 
 						<div class="sub-name">Email:</div>
-						<input name="_email" type="email" placeholder="Введите email" required value="trasher04@mail.ru"/>
+						<input name="_email" type="email" placeholder="Введите email" required />
 
 						<div class="sub-name">Пароль:</div>
-						<input name="_password" type="password" placeholder="Введите пароль" required value="asdqweASD_123"/>
+						<input name="_password" type="password" placeholder="Введите пароль" required />
 
 						<div class="sub-name">Повторите пароль:</div>
-						<input name="_passwordCopy" type="password" placeholder="Повторите пароль" required value="asdqweASD_123"/>
+						<input name="_passwordCopy" type="password" placeholder="Повторите пароль" required/>
 
 						<input type="button" class="button" value="Зарегистрироваться" onclick="RegIn()" style="margin-top: 10px; margin-bottom: 10px; width: 100%;"/>
 						<a href="login.php">Вернуться</a>

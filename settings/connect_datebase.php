@@ -1,3 +1,3 @@
 <?php
-	$mysqli = new mysqli('127.0.0.1', 'root', '', 'security1');
+	$mysqli = new mysqli('127.0.0.1', 'root', '', 'security_pr7');
 ?>
