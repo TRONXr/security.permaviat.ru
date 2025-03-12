@@ -1,12 +1,25 @@
 <?php
+	
 	session_start();
 	include("../settings/connect_datebase.php");
+	include("../recaptcha/autoload.php");
+	$secret = '6LcAxu8qAAAAAHG3W_gqybKFK-_deU09xKtlskCK';
 	
 	$login = $_POST['login'];
 	$password = $_POST['password'];
 	
 	// ищем пользователя
 	$query_user = $mysqli->query("SELECT * FROM `users` WHERE `login`='".$login."' AND `password`= '".$password."';");
+	if(isset($_POST['g-recaptcha-response'])){
+		$recaptcha = new \ReCaptcha\ReCaptcha($secret);
+		$resp = $recaptcha->verify($_POST['g-recaptcha-response'], $_SERVER['REMOTE_ADDR']);
+
+		if ($resp->isSuccess()){
+			echo "Авторизация успешна";
+
+		}
+		else echo "Пользователь не распознан";
+	}else echo "Нет ответа от капчи";
 	
 	$id = -1;
 	while($user_read = $query_user->fetch_row()) {
