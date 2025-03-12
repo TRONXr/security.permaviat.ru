@@ -47,6 +47,7 @@
 					<a href="regin.php">Регистрация</a>
 					<br><a href="recovery.php">Забыли пароль?</a>
 					<input type="button" class="button" value="Войти" onclick="LogIn()"/>
+					<center><div class="g-recaptcha" data-sitekey="6LcsVOwqAAAAAEaA_3GIEJtIq05JoZCMTtJ1nCEb"></div></center>
 					<img src = "img/loading.gif" class="loading"/>
 				</div>
 				
