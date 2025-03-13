@@ -9,6 +9,11 @@
 	
 		session_destroy();
 	
+
+
+
+
+		
 		echo json_encode(["status" => "success", "message" => "Вы успешно вышли из системы."]);
 	} else {
 		echo json_encode(["status" => "error", "message" => "Вы уже вышли из системы."]);
